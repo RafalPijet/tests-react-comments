@@ -26,7 +26,7 @@ export const thumbUpComment = () => {
     }
 };
 
-export const ThumbDownComment = () => {
+export const thumbDownComment = () => {
     return {
         type: THUMB_DOWN
     }
