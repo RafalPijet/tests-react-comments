@@ -4,12 +4,12 @@ export const REMOVE_COMMENT = "REMOVE_COMMENT";
 export const THUMB_UP = "THUMB_UP";
 export const THUMB_DOWN = "THUMB_DOWN";
 
-export const addComments = text => {
+export const addComments = (text, votes = 0) => {
     return {
         type: ADD_COMMENT,
         id: uuid.v4(),
         text,
-        votes: 0
+        votes
     }
 };
 
@@ -20,14 +20,16 @@ export const removeComment = id => {
     }
 };
 
-export const thumbUpComment = () => {
+export const thumbUpComment = id => {
     return {
-        type: THUMB_UP
+        type: THUMB_UP,
+        id
     }
 };
 
-export const thumbDownComment = () => {
+export const thumbDownComment = id => {
     return {
-        type: THUMB_DOWN
+        type: THUMB_DOWN,
+        id
     }
 };

@@ -10,7 +10,7 @@ const CommentsList = props => (
         {props.comments.map(comment => {
             return <Comment key={comment.id} text={comment.text} votes={comment.votes}
                             onClickUp={props.onClickUp} onClickDown={props.onClickDown}
-                            onClickRemove={props.onClickRemove}/>
+                            onClickRemove={props.onClickRemove} id={comment.id}/>
         })}
     </div>
 );
